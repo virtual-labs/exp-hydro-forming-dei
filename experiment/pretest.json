@@ -2,12 +2,12 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What is the most important parameter in hydro forming ?",
+      "question": "This is a Sample Question 1?",
       "answers": {
-        "a": "Pressure",
-        "b": "Surface Tension",
-        "c": "Viscosity",
-        "d": "None of these"
+        "a": "answer1",
+        "b": "answer2",
+        "c": "answer3",
+        "d": "answer4"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -19,12 +19,12 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Hydroforming is primarily used for manufacturing:?",
+      "question": "This is a Sample Question 2?",
       "answers": {
-        "a": "Different shape tube",
-        "b": "Embossed sheet",
-        "c": "Both a and b",
-        "d": "None of these"
+        "a": "answer1",
+        "b": "answer2",
+        "c": "answer3",
+        "d": "answer4"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -34,58 +34,6 @@
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
-    },
-     {
-      "question": "Which of the following can be manufactured using hydroforming:",
-      "answers": {
-        "a": "Gear",
-        "b": "Ring",
-        "c": "Exhaust pipes",
-        "d": "All of these"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "The static part during hydroforming process:",
-      "answers": {
-        "a": "Piston/Ram",
-        "b": "Die",
-        "c": "Both",
-        "d": "None of these"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "d",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "The static part during hydroforming process:",
-      "answers": {
-        "a": "Piston/Ram",
-        "b": "Die",
-        "c": "Both",
-        "d": "None of these"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    
+    }
   ]
 }
