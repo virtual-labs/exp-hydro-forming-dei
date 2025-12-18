@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
    {
-    "question": "What is the most important parameter in hydro forming?",
+    "question": "Q1.What is the most important parameter in hydro forming?",
     "answers": {
       "a": "Pressure",
       "b": "Surface tension",
@@ -19,7 +19,7 @@
     "difficulty": "beginner"
   },
   {
-    "question": "Hydroforming is primarily used for manufacturing:",
+    "question": "Q2.Hydroforming is primarily used for manufacturing:",
     "answers": {
       "a": "Different shape tubes",
       "b": "Embossed sheets",
@@ -36,7 +36,7 @@
     "difficulty": "beginner"
   },
   {
-    "question": "Which of the following can be manufactured using hydroforming:",
+    "question": "Q3.Which of the following can be manufactured using hydroforming:",
     "answers": {
       "a": "Gear",
       "b": "Ring",
@@ -53,7 +53,7 @@
     "difficulty": "beginner"
   },
   {
-    "question": "The static part during hydroforming process:",
+    "question": "Q4.The static part during hydroforming process:",
     "answers": {
       "a": "Piston/Ram",
       "b": "Die",
@@ -70,7 +70,7 @@
     "difficulty": "beginner"
   },
   {
-    "question": "The movable part during hydroforming process:",
+    "question": "Q5.The movable part during hydroforming process:",
     "answers": {
       "a": "Piston/Ram",
       "b": "Die",
