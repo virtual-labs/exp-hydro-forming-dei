@@ -1,39 +1,90 @@
 {
   "version": 2.0,
   "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+   {
+    "question": "What is the most important parameter in hydro forming?",
+    "answers": {
+      "a": "Pressure",
+      "b": "Surface tension",
+      "c": "Viscosity",
+      "d": "None of these"
     },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
+    "explanations": {
+      "a": "Correct. High fluid pressure is the key driving force that deforms the metal into the die shape during hydroforming.",
+      "b": "Surface tension has no significant role in metal deformation processes like hydroforming.",
+      "c": "Viscosity affects fluid flow but is not the controlling parameter for metal forming.",
+      "d": "Incorrect because pressure is the dominant parameter."
+    },
+    "correctAnswer": "a",
+    "difficulty": "beginner"
+  },
+  {
+    "question": "Hydroforming is primarily used for manufacturing:",
+    "answers": {
+      "a": "Different shape tubes",
+      "b": "Embossed sheets",
+      "c": "Both (a) and (b)",
+      "d": "None of these"
+    },
+    "explanations": {
+      "a": "Tube hydroforming is widely used to create complex tubular shapes.",
+      "b": "Sheet hydroforming is used to produce embossed or complex sheet components.",
+      "c": "Correct. Hydroforming is used for both tube forming and sheet metal forming.",
+      "d": "Incorrect because both applications are common."
+    },
+    "correctAnswer": "c",
+    "difficulty": "beginner"
+  },
+  {
+    "question": "Which of the following can be manufactured using hydroforming:",
+    "answers": {
+      "a": "Gear",
+      "b": "Ring",
+      "c": "Exhaust pipes",
+      "d": "All of these"
+    },
+    "explanations": {
+      "a": "Gears are usually manufactured by machining, casting, or forging, not hydroforming.",
+      "b": "Rings are typically produced by rolling or forging processes.",
+      "c": "Correct. Exhaust pipes are commonly manufactured using tube hydroforming due to complex shapes.",
+      "d": "Incorrect because gears and rings are not typical hydroformed products."
+    },
+    "correctAnswer": "c",
+    "difficulty": "beginner"
+  },
+  {
+    "question": "The static part during hydroforming process:",
+    "answers": {
+      "a": "Piston/Ram",
+      "b": "Die",
+      "c": "Both (a) and (b)",
+      "d": "None of these"
+    },
+    "explanations": {
+      "a": "The piston or ram moves to apply pressure.",
+      "b": "Correct. The die remains stationary and provides the shape to the workpiece.",
+      "c": "Incorrect because only the die is static.",
+      "d": "Incorrect because the die is a static component."
+    },
+    "correctAnswer": "b",
+    "difficulty": "beginner"
+  },
+  {
+    "question": "The movable part during hydroforming process:",
+    "answers": {
+      "a": "Piston/Ram",
+      "b": "Die",
+      "c": "Both (a) and (b)",
+      "d": "None of these"
+    },
+    "explanations": {
+      "a": "Correct. The piston or ram moves to generate and control fluid pressure.",
+      "b": "The die is fixed and does not move during the process.",
+      "c": "Incorrect because the die remains stationary.",
+      "d": "Incorrect because the piston/ram is movable."
+    },
+    "correctAnswer": "a",
+    "difficulty": "beginner"
+  }
   ]
 }
