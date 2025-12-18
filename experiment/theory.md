@@ -1,6 +1,6 @@
-# Hydroforming – Theory & Process Overview
+## Hydroforming – Theory & Process Overview
 
-## 1. Introduction
+### 1. Introduction
 Hydroforming is an advanced metal-forming process that uses **pressurized fluid** to shape ductile metals into lightweight, structurally rigid components. It is particularly useful for forming **closed sections with non-uniform cross-sections** along their length.
 
 ### Advantages of Hydroforming
@@ -12,7 +12,7 @@ Hydroforming is an advanced metal-forming process that uses **pressurized fluid*
 
 ---
 
-## 2. Types of Hydroforming
+### 2. Types of Hydroforming
 Hydroforming processes are broadly classified into two categories:
 
 1. **Tube Hydroforming**  
@@ -22,9 +22,9 @@ Both rely on fluid pressure and controlled material flow, but their applications
 
 ---
 
-# 3. Tube Hydroforming
+## 3. Tube Hydroforming
 
-## 3.1 Process Description
+### 3.1 Process Description
 Tube Hydroforming involves forming a tubular workpiece using internal fluid pressure combined with **axial feeding**.
 
 ### Basic Steps:
@@ -62,9 +62,9 @@ These components are commonly used in:
 
 ---
 
-# 4. Sheet Hydroforming
+## 4. Sheet Hydroforming
 
-## 4.1 Process Description
+### 4.1 Process Description
 Sheet Hydroforming is similar to deep drawing, but with **pressurized liquid** replacing one of the dies. Instead of a tube, a metal sheet blank is used.
 
 ### Key Characteristics:
@@ -77,7 +77,7 @@ Sheet Hydroforming is similar to deep drawing, but with **pressurized liquid** r
 1. **Punch-driven hydroforming** with fluid-backed support.
 2. **Fluid-driven hydroforming** where hydraulic pressure shapes the sheet without a punch.
 
-## 4.2 Advantages Over Traditional Deep Drawing
+### 4.2 Advantages Over Traditional Deep Drawing
 - Higher **Drawing Limit Ratio (DLR)** → deeper parts can be formed in a single stage.
 - Reduces wrinkling and tearing.
 - Better surface finish.
@@ -92,10 +92,10 @@ Sheet Hydroforming is similar to deep drawing, but with **pressurized liquid** r
 
 ---
 
-# 5. Summary
+## 5. Summary
 Hydroforming is a versatile manufacturing process capable of producing lightweight, strong, and geometrically complex components. Its two major types—tube and sheet hydroforming—serve different industrial needs, enabling modern designs in automotive, aerospace, and structural applications.
 
 ---
 
-# 6. References
+## 6. References
 1. Nico Langerak, Dinesh Kumar Rout, Rahul Verma, G. Manikandan, Arunansu Haldar, **“Tube Hydroforming in Automotive Applications.”**
