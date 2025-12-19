@@ -1,4 +1,4 @@
-## Hydroforming – Theory & Process Overview
+
 
 ### 1. Introduction
 Hydroforming is an advanced metal-forming process that uses **pressurized fluid** to shape ductile metals into lightweight, structurally rigid components. It is particularly useful for forming **closed sections with non-uniform cross-sections** along their length.
