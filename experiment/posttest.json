@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Q6. Which is a type of Hydroforming process?",
+      "question": "Q1. Which is a type of Hydroforming process?",
       "answers": {
         "a": "Tube hydroforming",
         "b": "Sheet hydroforming",
@@ -19,7 +19,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Q7. Which is an example of sheet hydroforming?",
+      "question": "Q2. Which is an example of sheet hydroforming?",
       "answers": {
         "a": "Punching",
         "b": "Deep drawing",
@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Q8. Which type of structure is formed using hydroforming process?",
+      "question": "Q3. Which type of structure is formed using hydroforming process?",
       "answers": {
         "a": "Unibody",
         "b": "Dualbody",
@@ -53,7 +53,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Q9. The advantages of hydroforming process are:",
+      "question": "Q4. The advantages of hydroforming process are:",
       "answers": {
         "a": "Low cost technology",
         "b": "Less material loss",
@@ -70,7 +70,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Q10. The disadvantage of hydroforming process are:",
+      "question": "Q5. The disadvantage of hydroforming process are:",
       "answers": {
         "a": "Low cost technology",
         "b": "Less material loss",
