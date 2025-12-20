@@ -97,5 +97,3 @@ Hydroforming is a versatile manufacturing process capable of producing lightweig
 
 ---
 
-## 6. References
-1. Nico Langerak, Dinesh Kumar Rout, Rahul Verma, G. Manikandan, Arunansu Haldar, **“Tube Hydroforming in Automotive Applications.”**
