@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1. Which is a type of Hydroforming process?",
+      "answers": {
+        "a": "Tube hydroforming",
+        "b": "Sheet hydroforming",
+        "c": "Both (a) and (b)",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "Tube hydroforming is used to shape hollow tubes using high-pressure fluid.",
+        "b": "Sheet hydroforming is used to form sheet metals using fluid pressure instead of a rigid die.",
+        "c": "Hydroforming includes both tube hydroforming and sheet hydroforming processes.",
+        "d": "This option is incorrect because hydroforming has defined types."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q2. Which is an example of sheet hydroforming?",
+      "answers": {
+        "a": "Punching",
+        "b": "Deep drawing",
+        "c": "Stamping",
+        "d": "None of These"
+      },
+      "explanations": {
+        "a": "Punching is a cutting operation, not a hydroforming process.",
+        "b": "Deep drawing can be performed using sheet hydroforming where fluid pressure replaces a rigid punch.",
+        "c": "Stamping generally uses solid dies, not fluid pressure.",
+        "d": "This option is incorrect because deep drawing is a valid example."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q3. Which type of structure is formed using hydroforming process?",
+      "answers": {
+        "a": "Unibody",
+        "b": "Dualbody",
+        "c": "Multibody",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "Hydroforming is commonly used in automotive industries to create strong and lightweight unibody structures.",
+        "b": "Dualbody is not a standard structural term in manufacturing.",
+        "c": "Multibody structures are not specifically associated with hydroforming.",
+        "d": "This option is incorrect because unibody structures are formed using hydroforming."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q4. The advantages of hydroforming process are:",
+      "answers": {
+        "a": "Low cost technology",
+        "b": "Less material loss",
+        "c": "Both (a) and (b)",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "Hydroforming reduces the need for multiple parts and welding, lowering overall cost.",
+        "b": "The process results in minimal material wastage compared to traditional forming methods.",
+        "c": "Hydroforming offers both low cost production and reduced material loss.",
+        "d": "This option is incorrect because hydroforming has clear advantages."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q5. The disadvantage of hydroforming process are:",
+      "answers": {
+        "a": "Low cost technology",
+        "b": "Less material loss",
+        "c": "Both (a) and (b)",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "Low cost technology is an advantage, not a disadvantage.",
+        "b": "Less material loss is also an advantage of hydroforming.",
+        "c": "Both options listed are advantages, not disadvantages.",
+        "d": "This is the correct option because none of the given choices describe a disadvantage."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+  ]
+}
