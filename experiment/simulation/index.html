@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -278,7 +278,6 @@
    
 
     <main>
-        <!-- Tube Hydroforming Section -->
         <div class="card theme-blue active" id="card1">
             <div class="card-header" onclick="toggleCard('card1')">
                 <h2>Tube Hydroforming</h2>
@@ -296,7 +295,6 @@
             </div>
         </div>
 
-        <!-- Single T Section -->
         <div class="card theme-teal" id="card2">
             <div class="card-header" onclick="toggleCard('card2')">
                 <h2>Tube Hydroforming - Single T</h2>
@@ -314,7 +312,6 @@
             </div>
         </div>
 
-        <!-- Double T Section -->
         <div class="card theme-indigo" id="card3">
             <div class="card-header" onclick="toggleCard('card3')">
                 <h2>Tube Hydroforming - Double T</h2>
@@ -332,7 +329,6 @@
             </div>
         </div>
 
-        <!-- Sheet Hydroforming Section -->
         <div class="card theme-orange" id="card4">
             <div class="card-header" onclick="toggleCard('card4')">
                 <h2>Sheet Hydroforming</h2>
@@ -351,7 +347,6 @@
         </div>
     </main>
 
-    <!-- Modal for Video Player -->
     <div class="modal-overlay" id="videoModal" onclick="closeModal(event)">
         <div class="modal-content">
             <div class="video-container">
@@ -483,5 +478,337 @@
             }
         };
     </script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hydroforming Simulations</title>
+  <style>
+    :root {
+      --sidebar-width: 280px;
+      --bg-main: #f9f9f9;      /* Off-white background */
+      --bg-sidebar: #ececec;   /* Light grey sidebar */
+      --text-dark: #333333;    /* Main text */
+      --accent: #666666;       /* Subtle accents */
+      --border: #d1d1d1;       /* Light grey borders */
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-dark);
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    /* --- Hamburger Menu Icon --- */
+    .menu-toggle {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1000;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text-dark);
+    }
+
+    /* --- Sidebar Navigation --- */
+    .sidebar {
+      position: fixed;
+      left: calc(-1 * var(--sidebar-width)); /* Hidden on mobile */
+      top: 0;
+      width: var(--sidebar-width);
+      height: 100%;
+      background: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 999;
+      padding-top: 70px;
+      box-sizing: border-box;
+      overflow-y: auto; /* Allow scrolling if list is long */
+      padding-bottom: 20px;
+    }
+
+    .sidebar.active {
+      transform: translateX(var(--sidebar-width));
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      font-size: 1rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
+    }
+
+    /* Simple category separators in sidebar */
+    .sidebar-category {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 15px 0 5px 22px; /* Align with button left margin roughly */
+      opacity: 0.8;
+    }
+
+    .menu-btn {
+      width: 85%;
+      display: block;
+      margin: 8px auto;
+      padding: 15px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text-dark);
+      text-align: left;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .menu-btn:hover {
+      background: var(--text-dark);
+      color: #ffffff;
+      border-color: var(--text-dark);
+    }
+
+    /* --- Main View --- */
+    .content {
+      padding: 20px;
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: margin-left 0.3s ease;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--accent);
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .video-container {
+      width: 100%;
+      max-width: 950px;
+      background: #fff;
+      padding: 8px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      box-sizing: border-box;
+    }
+
+    video {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      background: #000;
+    }
+
+    /* Description Box - styled exactly like video container */
+    .desc-container {
+      width: 100%;
+      max-width: 950px;
+      background: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+      box-sizing: border-box;
+    }
+
+    .desc-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .desc-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-dark);
+    }
+
+    /* Dim background when menu is open */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.3);
+      z-index: 998;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    /* --- Desktop Logic --- */
+    @media (min-width: 1024px) {
+      .sidebar {
+        left: 0;
+        transform: none;
+      }
+      .content {
+        margin-left: var(--sidebar-width);
+      }
+      .menu-toggle, .overlay {
+        display: none;
+      }
+      h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+  
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="sidebar" id="sidebar">
+    <h2>Hydroforming</h2>
+
+    <div class="sidebar-category">Tube Hydroforming</div>
+    <button class="menu-btn" onclick="loadSim('TubeHydroforming')">BASIC SETUP</button>
+    <button class="menu-btn" onclick="loadSim('CurveTubeHydroforming')">CURVE ANALYSIS</button>
+
+    <div class="sidebar-category">Single T</div>
+    <button class="menu-btn" onclick="loadSim('Hydroforming_ST')">SINGLE T FORMING</button>
+    <button class="menu-btn" onclick="loadSim('CurveHydroforming_ST')">SINGLE T + CURVE</button>
+
+    <div class="sidebar-category">Double T</div>
+    <button class="menu-btn" onclick="loadSim('Hydroforming_dt_ss')">DOUBLE T (SAME SIDE)</button>
+    <button class="menu-btn" onclick="loadSim('Hydroforming_DT_os')">DOUBLE T (OPP SIDE)</button>
+
+    <div class="sidebar-category">Sheet Hydroforming</div>
+    <button class="menu-btn" onclick="loadSim('SheetHydroforming')">SHEET PROCESS</button>
+    <button class="menu-btn" onclick="loadSim('SheetStrainHydroforming')">STRAIN & TEMP</button>
+  </div>
+
+  <div class="content">
+    <h1 id="sim-title">Select a Simulation to Begin</h1>
+    
+    <div class="video-container">
+      <video id="sim-video" controls playsinline>
+        <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="desc-container">
+      <span class="desc-label">Description</span>
+      <div id="sim-desc" class="desc-text">
+        Select a simulation from the menu to view details.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Data Object
+    const hydroData = {
+        "TubeHydroforming": {
+            title: "Basic Tube Hydroforming",
+            src: "Forming/Hydroforming/TubeHydroforming.mp4",
+            text: "On left hand side, the full in section of hydroforming setup is shown. The tube is shown in red, the die in green and pistons in yellow. As the piston pushes the tube, the tube occupies the cavity under fluid pressure.<br><br>On the right hand side, a picture is shown. The top end of the picture shows the full in section of setup of a basic Hydroforming process."
+        },
+        "CurveTubeHydroforming": {
+            title: "Hydroforming with Curve Analysis",
+            src: "Forming/Hydroforming/CurveTubeHydroforming.mp4",
+            text: "On left hand side, the full section setup is shown. On the right hand, top side, equivalent strains generated in the tube are shown with different colour contours. On right hand, bottom end, Force vs Time graph is shown. The Y axis of graph indicates Force in Tonnes whereas the X axis shows Time in seconds."
+        },
+        "Hydroforming_ST": {
+            title: "Single T Hydroforming",
+            src: "Forming/Hydroforming/Hydroforming_ST.mp4",
+            text: "On left hand side, the full section of Tube Hydroforming-single T setup is shown. The tube is shown in red, the die in green and pistons in yellow. As the piston pushes the tube, the tube starts occupying the T shape under fluid pressure."
+        },
+        "CurveHydroforming_ST": {
+            title: "Single T with Curve",
+            src: "Forming/Hydroforming/CurveHydroforming_ST.mp4",
+            text: "Simulation showing the strain distribution during Single T hydroforming. Right hand side displays equivalent strain contours and the Force vs Time graph indicating tonnage requirements."
+        },
+        "Hydroforming_dt_ss": {
+            title: "Double T - Same Side",
+            src: "Forming/Hydroforming/Hydroforming_dt_ss.mp4",
+            text: "Visualization of Double T formation on the same side. Magnified view shows equivalent strains. Graph shows Force vs Pilot Height."
+        },
+        "Hydroforming_DT_os": {
+            title: "Double T - Opposite Side",
+            src: "Forming/Hydroforming/Hydroforming_DT_os.mp4",
+            text: "Visualization of Double T formation on opposite sides. The die is shown in green, tube in red. Graph shows Force vs Pilot Height."
+        },
+        "SheetHydroforming": {
+            title: "Sheet Hydroforming Process",
+            src: "Forming/Hydroforming/SheetHydroforming.mp4",
+            text: "In sheet hydroforming, a sheet is pressed inside the lower die with fluid pressure. Left side shows the die arrangement. Right top shows strain generation. Right bottom shows the deformation stages."
+        },
+        "SheetStrainHydroforming": {
+            title: "Sheet Hydroforming: Strain & Temp",
+            src: "Forming/Hydroforming/SheetStrainHydroforming.mp4",
+            text: "This video shows the variation of strain and temperature. Left side shows strain on inner surface. Right top shows strain on outer surface. Right bottom shows temperature variation (20°C to 34°C)."
+        }
+    };
+
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
+
+    function loadSim(key) {
+      const data = hydroData[key];
+      if (!data) return;
+
+      // Update Text
+      document.getElementById('sim-title').innerText = data.title;
+      document.getElementById('sim-desc').innerHTML = data.text;
+
+      // Update Video
+      const video = document.getElementById('sim-video');
+      video.src = data.src;
+      video.load();
+      video.play().catch(e => console.log("Autoplay blocked"));
+
+      // Auto-close menu on mobile
+      if (window.innerWidth < 1024) {
+        toggleMenu();
+      }
+    }
+
+    // Load first video by default
+    window.onload = function() {
+        loadSim('TubeHydroforming');
+    };
+  </script>
 </body>
 </html>
